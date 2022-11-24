@@ -6,7 +6,6 @@ export const Header = styled.header`
     background: ${(props) => props.theme['base-background']};
 
     width: 100%;
-    max-width: 1440px;
 
     height: 296px;
 
