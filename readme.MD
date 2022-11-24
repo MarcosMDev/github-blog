@@ -25,6 +25,7 @@ Esse projeto foi desenvolvido com as seguintes principais tecnologias:
 - [ViteJS](https://vitejs.dev/);
 - [Typescript](https://www.typescriptlang.org/);
 - [Context API](https://pt-br.reactjs.org/docs/context.html);
+- [Axios](https://axios-http.com/docs/intro);
 - [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start);
 - [React Hook Form](https://react-hook-form.com/);
 - [Styled Components](https://styled-components.com/);
