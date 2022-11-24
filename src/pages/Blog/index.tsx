@@ -16,7 +16,7 @@ import { Publications } from './components/Publications'
 interface Profile {
     name: string
     avatar_url: string
-    url: string
+    html_url: string
     bio: string
     login: string
     company: string
@@ -47,7 +47,7 @@ export function Blog() {
                     <InfoProfileContainer>
                         <header>
                             <h1>{profile.name}</h1>
-                            <LinkHeaderProfile href={profile.url}>
+                            <LinkHeaderProfile href={profile.html_url}>
                                 GITHUB <BsBoxArrowUpRight size={12} />
                             </LinkHeaderProfile>
                         </header>
