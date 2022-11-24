@@ -17,7 +17,7 @@ import {
     TagsContainer,
 } from './styles'
 import { useContext, useEffect } from 'react'
-import { PublicationContext } from '../../contexts/PostsContext'
+import { PublicationContext } from '../../contexts/PublicationContext'
 import { formatDate } from '../../utils/formtatDate'
 
 export function Post() {

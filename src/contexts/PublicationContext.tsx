@@ -1,17 +1,11 @@
-import {
-    createContext,
-    ReactNode,
-    useCallback,
-    useEffect,
-    useState,
-} from 'react'
+import { createContext, ReactNode, useCallback, useState } from 'react'
 import { api } from '../lib/axios'
 
 interface PublicationProviderProps {
     children: ReactNode
 }
 
-interface Publication {
+export interface Publication {
     id: number
     number: number
     title: string
@@ -26,9 +20,7 @@ interface Publication {
 
 interface PublicationContextType {
     loading: boolean
-    publications: Publication[]
     publication: Publication
-    fetchPublications: (query?: string) => Promise<void>
     fetchPublication: (number: string) => Promise<void>
 }
 
@@ -38,24 +30,9 @@ export const PublicationContext = createContext<PublicationContextType>(
 
 export function PublicationProvider({ children }: PublicationProviderProps) {
     const [loading, setLoading] = useState(false)
-    const [publications, setPublications] = useState<Publication[]>([])
     const [publication, setPublication] = useState<Publication>(
         {} as Publication,
     )
-
-    const fetchPublications = useCallback(async (query?: string) => {
-        setLoading(true)
-        const response = await api.get('/search/issues', {
-            params: {
-                q: `${
-                    query || ''
-                }repo:rocketseat-education/reactjs-github-blog-challenge`,
-            },
-        })
-
-        setPublications(response.data.items)
-        setLoading(false)
-    }, [])
 
     const fetchPublication = useCallback(async (number: string) => {
         setLoading(true)
@@ -67,17 +44,11 @@ export function PublicationProvider({ children }: PublicationProviderProps) {
         setLoading(false)
     }, [])
 
-    useEffect(() => {
-        fetchPublications()
-    }, [fetchPublications])
-
     return (
         <PublicationContext.Provider
             value={{
                 loading,
                 publication,
-                publications,
-                fetchPublications,
                 fetchPublication,
             }}
         >

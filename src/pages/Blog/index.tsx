@@ -5,15 +5,13 @@ import {
     LinkHeaderProfile,
     MainContainer,
     PersonalInfoContainer,
-    PostsContainer,
     ProfileContainer,
     TagInfoContainer,
 } from './styles'
-import { SearchForm } from './components/SearchForm'
-import { CardPost } from './components/CardPost'
 import { useCallback, useContext, useEffect, useState } from 'react'
 import { api } from '../../lib/axios'
-import { PublicationContext } from '../../contexts/PostsContext'
+import { PublicationContext } from '../../contexts/PublicationContext'
+import { Publications } from './components/Publications'
 
 interface Profile {
     name: string
@@ -26,7 +24,7 @@ interface Profile {
 }
 
 export function Blog() {
-    const { publications, loading } = useContext(PublicationContext)
+    const { loading } = useContext(PublicationContext)
     const [profile, setProfile] = useState<Profile>({} as Profile)
 
     const fetchProfile = useCallback(async () => {
@@ -69,21 +67,7 @@ export function Blog() {
                     </InfoProfileContainer>
                 </ProfileContainer>
             )}
-
-            <SearchForm />
-            <PostsContainer>
-                {loading
-                    ? 'carregando'
-                    : publications.map((publication) => (
-                          <CardPost
-                              key={publication.id}
-                              number={publication.number}
-                              title={publication.title}
-                              body={publication.body}
-                              createdAt={publication.created_at}
-                          />
-                      ))}
-            </PostsContainer>
+            <Publications />
         </MainContainer>
     )
 }
