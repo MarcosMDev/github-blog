@@ -1,5 +1,5 @@
 <div align='center'>
-  <img src="./src/assets/capa-github-glob.png" alt="">
+  <img src="./src/assets/capa-github-blog.png" alt="">
 </div>
 
 <h1 align='center'>
