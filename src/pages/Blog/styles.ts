@@ -38,6 +38,7 @@ export const ProfileContainer = styled.div`
 export const InfoProfileContainer = styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     header {
         display: flex;
