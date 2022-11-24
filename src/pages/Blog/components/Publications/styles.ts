@@ -5,6 +5,7 @@ export const SearchFormContainer = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
+    width: 100%;
 
     input {
         width: 100%;
@@ -50,10 +51,14 @@ export const InfoPublicationsContainer = styled.div`
 `
 
 export const PostsContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+    display: flex;
+    justify-content: space-between;
     row-gap: 2rem;
 
     margin-top: 3rem;
+
+    @media screen and (min-width: 200px) and (max-width: 1120px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
 `

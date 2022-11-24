@@ -8,7 +8,7 @@ export const CardPostContainer = styled(Link)`
     flex-direction: column;
     gap: 1.25rem;
 
-    width: 25rem;
+    width: 26rem;
     height: 16.25rem;
 
     border-radius: 10px;
@@ -27,6 +27,10 @@ export const CardPostContainer = styled(Link)`
     div {
         text-overflow: clip;
         overflow: hidden;
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 1200px) {
+        width: 100%;
     }
 `
 

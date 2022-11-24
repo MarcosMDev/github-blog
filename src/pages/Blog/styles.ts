@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const MainContainer = styled.main`
     display: flex;
     flex-direction: column;
+
+    margin: 0 18rem;
+
+    width: 100%;
 `
 
 export const ProfileContainer = styled.div`
@@ -11,6 +15,7 @@ export const ProfileContainer = styled.div`
 
     background: ${(props) => props.theme['base-profile']};
 
+    width: 100%;
     padding: 2rem 2.5rem;
     border-radius: 10px;
 
@@ -22,6 +27,12 @@ export const ProfileContainer = styled.div`
     }
 
     margin-bottom: 4.5rem;
+
+    @media screen and (min-width: 200px) and (max-width: 1040px) {
+        img {
+            display: none;
+        }
+    }
 `
 
 export const InfoProfileContainer = styled.div`
@@ -42,6 +53,10 @@ export const InfoProfileContainer = styled.div`
             color: ${(props) => props.theme['base-title']};
 
             margin-bottom: 0.5rem;
+        }
+
+        @media screen and (min-width: 200px) and (max-width: 1040px) {
+            align-items: center;
         }
     }
 
@@ -75,6 +90,11 @@ export const PersonalInfoContainer = styled.div`
     display: flex;
     gap: 1.5rem;
     align-items: center;
+
+    @media screen and (min-width: 200px) and (max-width: 1040px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 export const TagInfoContainer = styled.span`

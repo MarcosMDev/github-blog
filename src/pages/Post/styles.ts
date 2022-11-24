@@ -69,6 +69,10 @@ export const TagsContainer = styled.div`
 
         font-size: 1rem;
     }
+
+    @media screen and (min-width: 200px) and (max-width: 1040px) {
+        flex-direction: column;
+    }
 `
 export const ContentPostContainer = styled.div`
     display: flex;

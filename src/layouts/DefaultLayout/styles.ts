@@ -24,4 +24,9 @@ export const LayoutContent = styled.div`
 
     margin-top: -5rem;
     margin-bottom: 14rem;
+
+    @media screen and (min-width: 200px) and (max-width: 1040px) {
+        margin: 0 1rem;
+        margin-top: -6rem;
+    }
 `
