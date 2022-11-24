@@ -12,7 +12,7 @@ Desafio 3 - Ignite 2022 🚀
 
  # 💻 Projeto
 
-Blog pessoal com informações consultados da API do GITHUB, onde é listado os posts cadastrados nas issues do repositório sendo possível visualizar detalhadamente um post especifico.
+Blog pessoal com informações consultadas na API do GITHUB, onde é listado os posts cadastrados nas issues do repositório sendo possível visualizar detalhadamente um post especifico.
 
 A aplicação foi desenvolvida com React + Typescript e como desafio do módulo 3 do bootcamp Ignite - 2022. Neste projeto foi aplicado diversos conhecimentos visto no módulo como: Fetch / Axios, rotas, formulários com React-Hook-Form, hooks (useState, useEffect e useCallback), além dos fundamentos básicos da ferramenta como por exemplo a componentização.
 
